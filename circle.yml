@@ -1,0 +1,4 @@
+test:
+  override:
+    - bundle exec rspec --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec_1.xml spec/test_1_spec.rb
+    - bundle exec rspec --format RspecJunitFormatter --out $CIRCLE_TEST_REPORTS/rspec_1.xml spec/test_2_spec.rb
