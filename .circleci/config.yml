@@ -8,3 +8,11 @@ jobs:
       - run:
           name: Say hello
           command: echo Hello && sleep 10 && echo Bye
+  other-build:
+    docker:
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - run:
+          name: Say hello
+          command: echo Hello Other && sleep 10 && echo Bye Other
