@@ -16,3 +16,8 @@ jobs:
       - run:
           name: Say hello
           command: echo Hello Other && sleep 10 && echo Bye Other
+workflows:
+  version: 2
+  build1:
+    jobs:
+      - build
