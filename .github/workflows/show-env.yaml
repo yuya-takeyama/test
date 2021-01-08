@@ -1,0 +1,13 @@
+on:
+  - push
+  - pull_request
+
+jobs:
+  show-env:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "GITHUB_REF:      ${GITHUB_REF}"
+          echo "GITHUB_HEAD_REF: ${GITHUB_HEAD_REF}"
+          echo "GITHUB_BASE_REF: ${GITHUB_BASE_REF}"
+
