@@ -18,12 +18,12 @@ jobs:
     env:
       BACKPORT_BASE_BRANCH: 'develop'
     steps:
-      - id: open-backport-pull-request
+      - id: backport
         name: Open Backport Pull Request
         uses: quipper/monorepo-deploy-actions/open-backport-pull-request@open-backport-pull-request
         with:
           base-branch: develop
       - name: Show Pull Request URL
-        if: ${{ startsWith(steps.open-pull-request.outputs.pull-request-url, 'https://') }}
+        if: ${{ startsWith(steps.backport.outputs.pull-request-url, 'https://') }}
         run: |
-          echo "URL: ${{steps.open-pull-request.outputs.pull-request-url}}"
+          echo "URL: ${{steps.backport.outputs.pull-request-url}}"
