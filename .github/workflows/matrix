@@ -1,0 +1,14 @@
+name: matrix
+
+on: push
+
+jobs:
+  runs-on: ubuntu-latest
+  strategy:
+    matrix:
+      key:
+        - foo
+        - bar
+        - baz
+  steps:
+    - run: echo '${{ matrix.key }}'
