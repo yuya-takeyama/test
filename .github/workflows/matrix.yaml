@@ -4,6 +4,7 @@ on: push
 
 jobs:
   job:
+    name: this-is-the-job
     runs-on: ubuntu-latest
     strategy:
       matrix:
