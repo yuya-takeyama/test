@@ -4,7 +4,7 @@ on: push
 
 jobs:
   job:
-    name: this-is-the-job ({{ $matrix.key }})
+    name: this-is-the-job (${{ matrix.key }})
     runs-on: ubuntu-latest
     strategy:
       matrix:
